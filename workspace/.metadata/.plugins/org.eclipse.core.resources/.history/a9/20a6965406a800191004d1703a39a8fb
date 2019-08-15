@@ -1,0 +1,5 @@
+package entities.copy;
+
+public class user {
+
+}

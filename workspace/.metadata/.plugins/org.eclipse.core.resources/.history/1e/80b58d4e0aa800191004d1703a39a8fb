@@ -1,0 +1,42 @@
+package com.mybank;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.mybank.dto.BankDTO;
+import com.mybank.dto.TransferDTO;
+import com.users.domain.UserRepository;
+
+@RestController
+public class BankController {
+
+    @Autowired
+    private UserRepository repository;
+
+    
+ // Save
+    @PostMapping("/transfer")
+    //return 201 instead of 200
+    @ResponseStatus(HttpStatus.CREATED)
+    TransferDTO newBook(@RequestBody TransferDTO transferDTO) {
+    	List<BankDTO> listBanks = repository.getBankDTO();
+    	
+    	
+        return processTransfer(transferDTO);
+    }
+    
+    private TransferDTO processTransfer(TransferDTO transferDTO){
+    	TransferDTO newtransferDTO= null;
+    	
+    	
+    	return newtransferDTO;
+    	
+    }
+    
+}

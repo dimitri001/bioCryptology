@@ -1,0 +1,73 @@
+package com.mybank.dto;
+
+import java.math.BigDecimal;
+import java.util.List;
+
+
+public class AccountDTO {
+
+
+    private Long id;
+    private String accountNumber;
+    private BigDecimal money;
+    private List<TransferDTO> listTransferDTO;
+
+    public AccountDTO() {
+    }
+
+    public AccountDTO(Long id, String accountNumber, BigDecimal money, List<TransferDTO> listTransferDTO) {
+        this.id = id;
+        this.accountNumber = accountNumber;
+        this.money = money;
+        this.listTransferDTO = listTransferDTO;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+    
+    public String getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(String accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public BigDecimal getMoney() {
+		return money;
+	}
+
+	public void setMoney(BigDecimal money) {
+		this.money = money;
+	}
+
+	public List<TransferDTO> getListTransferDTO() {
+		return listTransferDTO;
+	}
+
+	public void setListTransferDTO(List<TransferDTO> listTransferDTO) {
+		this.listTransferDTO = listTransferDTO;
+	}
+
+	@Override
+    public String toString() {
+		String transfers = "";
+		
+        for(TransferDTO transferDTO : this.listTransferDTO){
+        	transfers = transfers+'\''+transferDTO.toString();        	
+        }
+        
+        return "Book{" +
+                "id=" + id +
+                ", acountNumber='" + accountNumber + '\'' +
+                ", money='" + money + '\'' +
+                ", listTransferDTO=" + transfers +
+                '}';
+    }
+
+}

@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun com.users.UserControllerRestTemplateTest.find_allUser_OK" project="spring-rest-test" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testcase name="find_allUser_OK" classname="com.users.UserControllerRestTemplateTest" incomplete="true"/>
+</testrun>
