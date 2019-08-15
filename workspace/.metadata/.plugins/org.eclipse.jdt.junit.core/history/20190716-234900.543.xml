@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testrun name="UserControllerRestTemplateTest" project="spring-rest-test" tests="5" started="4" failures="0" errors="0" ignored="0">
-  <testsuite name="com.users.UserControllerRestTemplateTest" incomplete="true">
-    <testcase name="update_user_OK" classname="com.users.UserControllerRestTemplateTest" time="5.123"/>
-    <testcase name="find_userId_OK" classname="com.users.UserControllerRestTemplateTest" time="3.419"/>
-    <testcase name="delete_user_OK" classname="com.users.UserControllerRestTemplateTest" time="1.304"/>
-    <testcase name="find_allUser_OK" classname="com.users.UserControllerRestTemplateTest" incomplete="true"/>
-    <testcase name="save_user_OK" classname="com.users.UserControllerRestTemplateTest" incomplete="true"/>
-  </testsuite>
-</testrun>
